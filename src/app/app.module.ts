@@ -9,6 +9,7 @@ import { ListaTarefasComponent } from './components/lista-tarefas/lista-tarefas.
 import { FormularioUsuarioComponent } from './components/formulario-usuario/formulario-usuario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SelecaoProdutoComponent } from './components/selecao-produto/selecao-produto.component';
+import { FiltroPesquisaComponent } from './components/filtro-pesquisa/filtro-pesquisa.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SelecaoProdutoComponent } from './components/selecao-produto/selecao-pr
     ContadorComponent,
     ListaTarefasComponent,
     FormularioUsuarioComponent,
-    SelecaoProdutoComponent
+    SelecaoProdutoComponent,
+    FiltroPesquisaComponent
   ],
   imports: [
     BrowserModule,

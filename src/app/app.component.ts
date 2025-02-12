@@ -29,6 +29,8 @@ export class AppComponent {
     { id: 5, nome: 'Aspirador de pó', marca: 'Philco' },
   ];
 
+  public filtroPesquisa = "Filtro da pesquisa";
+
   onValueEmitted(number: number) {
     this.initialValue = number;
   }
@@ -52,5 +54,10 @@ export class AppComponent {
     if(produto) {
       alert(`A tarefa "${produto.nome}" foi selecionado`);
     }
+  }
+
+  onPesquisaFiltrada(evento: any) {
+    this.filtroPesquisa = evento;
+    console.log(this.filtroPesquisa)
   }
 }

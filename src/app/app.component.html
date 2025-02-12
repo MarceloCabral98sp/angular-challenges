@@ -19,3 +19,7 @@
 <br>
 
 <app-selecao-produto [listaProdutos]="listaProdutos" (produtoId)="onProdutoSelecionado($event)"></app-selecao-produto>
+
+<br>
+
+<app-filtro-pesquisa (filtragem)="onPesquisaFiltrada($event)" [filtroPesquisa]="filtroPesquisa"></app-filtro-pesquisa>

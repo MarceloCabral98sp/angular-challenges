@@ -1,0 +1,11 @@
+<p>Crie um componente FiltroPesquisaComponent que contém um campo de entrada de texto para pesquisa. O valor inicial do campo deve ser passado pelo componente pai usando Input. À medida que o usuário digita, o componente deve emitir eventos através de Output passando o texto atual para o componente pai, permitindo a filtragem de uma lista em tempo real.</p>
+<br>
+<div>
+    <form [formGroup]="formulario">
+        <div>
+            <label for="pesquisa">Pesquisa:</label>
+            <input type="text" id="pesquisa" formControlName="pesquisa">
+        </div>
+        <br>
+    </form>
+</div>
