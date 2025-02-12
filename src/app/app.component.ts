@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-challenges';
+  
+  public initialValue: number = 15;
+
+  onValueEmitted(number: number) {
+    this.initialValue = number;
+  }
 }
