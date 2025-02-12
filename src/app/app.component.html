@@ -1,3 +1,13 @@
 <h3>Input/Output Challenges</h3>
 
-<app-contador [initialValue]="initialValue" (newValue)="onValueEmitted($event)"></app-contador>
+<app-contador
+  [initialValue]="initialValue"
+  (newValue)="onValueEmitted($event)"
+></app-contador>
+
+<br />
+
+<app-lista-tarefas
+  [listaTarefas]="listaTarefas"
+  (tarefaConcluida)="onTarefaConcluida($event)"
+></app-lista-tarefas>

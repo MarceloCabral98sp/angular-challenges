@@ -1,0 +1,16 @@
+<p>
+  Desenvolva um componente ListaTarefasComponent que receba uma lista de tarefas
+  (objetos com propriedades como id e descrição) através de Input. Cada tarefa
+  deve ter um botão "Concluir". Ao clicar nesse botão, o componente deve emitir
+  um evento usando Output para informar ao componente pai que a tarefa foi
+  concluída, passando o id da tarefa como parâmetro.
+</p>
+
+<br />
+
+<div *ngFor="let tarefa of listaTarefas">
+  <p>
+    Tarefa: {{ tarefa.tarefa }}
+    <button (click)="onConcluir(tarefa.id)">Concluir</button>
+  </p>
+</div>
