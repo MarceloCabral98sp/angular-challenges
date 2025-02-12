@@ -1,0 +1,16 @@
+<p>Crie um componente FormularioUsuarioComponent que contém um formulário para capturar informações do usuário, como nome e e-mail. O componente pai deve fornecer um objeto de usuário pré-preenchido através de Input. Quando o formulário for submetido, o componente deve emitir um evento via Output passando os dados atualizados do usuário para o componente pai.</p>
+<br>
+<div>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" formControlName="nome" [placeholder]="dadosForm.nome">
+
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email" [placeholder]="dadosForm.email">
+        </div>
+        <button [disabled]="formulario.invalid" type="submit">Enviar</button>
+    </form>
+</div>

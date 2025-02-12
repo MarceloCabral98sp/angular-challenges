@@ -11,3 +11,7 @@
   [listaTarefas]="listaTarefas"
   (tarefaConcluida)="onTarefaConcluida($event)"
 ></app-lista-tarefas>
+
+<br> 
+
+<app-formulario-usuario [dadosForm]="dadosForm" (newForm)="onNewForm($event)"></app-formulario-usuario>

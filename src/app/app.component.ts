@@ -15,7 +15,12 @@ export class AppComponent {
     { id: 3, tarefa: "Fazer a limpeza da casa" },
     { id: 4, tarefa: "Pagar contas" },
     { id: 5, tarefa: "Ligar para o médico" }
-  ]
+  ];
+
+  public dadosForm = {
+    nome: 'José Fernandes Toledo',
+    email: 'jose.toledo@gmail.com'
+  }
 
   onValueEmitted(number: number) {
     this.initialValue = number;
@@ -27,5 +32,11 @@ export class AppComponent {
     if(tarefa) {
       alert(`A tarefa "${tarefa.tarefa}" foi concluída`);
     }
+  }
+
+  onNewForm(form: { nome: string, email: string}) {
+
+    this.dadosForm = form;
+    console.log(this.dadosForm)
   }
 }

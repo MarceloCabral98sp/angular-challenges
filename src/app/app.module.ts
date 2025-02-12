@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { ManualCreatedComponent } from './components/manual-created/manual-created.component';
 import { ContadorComponent } from './components/contador/contador.component';
 import { ListaTarefasComponent } from './components/lista-tarefas/lista-tarefas.component';
+import { FormularioUsuarioComponent } from './components/formulario-usuario/formulario-usuario.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ManualCreatedComponent,
     ContadorComponent,
-    ListaTarefasComponent
+    ListaTarefasComponent,
+    FormularioUsuarioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
