@@ -8,6 +8,7 @@ import { ContadorComponent } from './components/contador/contador.component';
 import { ListaTarefasComponent } from './components/lista-tarefas/lista-tarefas.component';
 import { FormularioUsuarioComponent } from './components/formulario-usuario/formulario-usuario.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SelecaoProdutoComponent } from './components/selecao-produto/selecao-produto.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ManualCreatedComponent,
     ContadorComponent,
     ListaTarefasComponent,
-    FormularioUsuarioComponent
+    FormularioUsuarioComponent,
+    SelecaoProdutoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+<p>Desenvolva um componente SelecaoProdutoComponent que exiba uma lista de produtos fornecida pelo componente pai através de Input. Cada produto deve ter um botão "Selecionar". Ao clicar nesse botão, o componente deve emitir um evento usando Output para informar ao componente pai qual produto foi selecionado, passando o objeto do produto como parâmetro.</p>
+
+<br>
+
+<div *ngFor="let produto of listaProdutos">
+    <p>
+      Produto: {{ produto.nome }} - {{ produto.marca }}
+    </p>
+    <button (click)="onSelecionar(produto.id)">Selecionar</button>
+</div>

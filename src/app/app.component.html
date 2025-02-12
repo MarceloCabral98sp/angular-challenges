@@ -15,3 +15,7 @@
 <br> 
 
 <app-formulario-usuario [dadosForm]="dadosForm" (newForm)="onNewForm($event)"></app-formulario-usuario>
+
+<br>
+
+<app-selecao-produto [listaProdutos]="listaProdutos" (produtoId)="onProdutoSelecionado($event)"></app-selecao-produto>
