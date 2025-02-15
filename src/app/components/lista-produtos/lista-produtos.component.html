@@ -1,0 +1,7 @@
+<p>Criar um componente que exiba uma lista de produtos com seus respectivos preços e datas de lançamento, formatando esses dados utilizando os pipes embutidos do Angular.</p>
+<br>
+<div *ngFor="let produto of produtos">
+    <p>Produto: {{ produto.nome }}</p>
+    <p>Preço: {{ produto.preco | currency: 'BRL':'symbol':'1.2-2' }}</p>
+    <p>Data de lançamento: {{ produto.dataLancamento | date: 'dd/MM/yyyy'}}</p>
+</div>

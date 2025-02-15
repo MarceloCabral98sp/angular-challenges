@@ -1,0 +1,10 @@
+<p>Desenvolver um pipe personalizado que filtre uma lista de usuários com base em um termo de pesquisa inserido pelo usuário.</p>
+<br>
+<input type="text" [(ngModel)]="termoPesquisa" placeholder="Pesquisar usuário">
+<ul>
+    <li *ngFor="let usuario of usuarios | filtroUsuario: termoPesquisa">
+        <p>Nome: {{ usuario.nome }}</p>
+        <p>Email: {{ usuario.email }}</p>
+        <p>Iniciais: {{ usuario.nome | initials: '-'}}</p>
+    </li>
+</ul>
