@@ -1,0 +1,10 @@
+<p>Exercício - ngStyle e ngClass</p>
+<br />
+<ul>
+  <li *ngFor="let tarefa of tarefas" (click)="alternarConclusao(tarefa)"
+    [ngClass]="tarefa.concluida ? 'concluida' : 'pendente'"
+    [ngStyle]="{'font-style': tarefa.concluida ? 'italic': 'normal'}"
+  >
+    {{ tarefa.descricao }}
+  </li>
+</ul>

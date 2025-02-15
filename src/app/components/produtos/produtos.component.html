@@ -1,0 +1,5 @@
+<p>Desenvolva um componente que tenha uma propriedade produtos, que é uma lista de objetos contendo id e nome de produtos. No template, use for para iterar sobre essa lista e exibir cada produto em uma lista não ordenada.</p>
+<br>
+@for(produto of produtos; track produto.id) {
+    <p>Produto: {{ produto.nome }}</p>
+}

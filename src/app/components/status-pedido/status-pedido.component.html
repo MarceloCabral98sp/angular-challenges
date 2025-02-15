@@ -1,0 +1,21 @@
+<p>Crie um componente com uma propriedade statusPedido que pode ter os valores 'pendente', 'em_transporte' ou 'entregue'. Utilize switch no template para exibir mensagens diferentes dependendo do estado do pedido.</p>
+<br>
+@for(produto of produtosComprados; track produto.id) {
+    <p>Pedido: {{ produto.nome }}</p>
+
+    @switch(produto.statusPedido) {
+        @case("pendente") {
+            <p>Status: O pedido ainda não foi entregue</p>
+        }
+        @case("em_transporte") {
+            <p>Status: O pedido já saiu para a entrega e em breve chegará a sua residência</p>
+        }
+        @case("entregue") {
+            <p>Eba! o seu produto já chegou</p>
+        }
+        @default {
+            <p>Status: Desconhecido. Por favor, entre em contato com o suporte.</p>
+        }
+    }
+    <br>
+}
