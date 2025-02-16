@@ -3,24 +3,20 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaProdutosComponent } from './components/lista-produtos/lista-produtos.component';
-import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { FormsModule } from '@angular/forms'
-import { FiltroUsuarioPipe } from './pipes/filtro-usuario/filtro-usuario.pipe';
-import { InitialsPipe } from './pipes/initials.pipe';
+import { ListaModule } from './components/lista.module';
+import { SharedModule } from './shared/shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListaProdutosComponent,
-    ListaUsuariosComponent,
-    FiltroUsuarioPipe,
-    InitialsPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ListaModule,
+    SharedModule
   ],
   providers: [
     provideClientHydration()
