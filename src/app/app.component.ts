@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigService } from './services/config.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-challenges';
+  
+  apiUrl: string;
+
+  constructor(private configService: ConfigService) {
+    this.apiUrl = this.configService.getConfig();
+  }
 }
