@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-challenges';
+  public titulo = 'Curso de Angular';
+  public mostrarFilho = true;
+
+  changeTitulo() {
+    this.titulo = 'Curso de React.js';
+  }
+
+  toggleComponent() {
+    this.mostrarFilho = false;
+  }
 }
