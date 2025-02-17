@@ -1,0 +1,5 @@
+<h4>Lista de usuários cadastrados</h4>
+
+<div *ngFor="let user of users$ | async">
+    <p>Usuário: {{ user.user }}</p>
+</div>
