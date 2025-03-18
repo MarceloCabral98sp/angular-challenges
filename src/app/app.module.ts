@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +8,15 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import { FormsModule } from '@angular/forms'
 import { FiltroUsuarioPipe } from './pipes/filtro-usuario/filtro-usuario.pipe';
 import { InitialsPipe } from './pipes/initials.pipe';
+import { DiscountPipe } from './pipes/discount.pipe';
+import { PrecoProdutosComponent } from './components/preco-produtos/preco-produtos.component';
+import { CommonModule, registerLocaleData } from '@angular/common';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import localePt from '@angular/common/locales/pt';
+
+
+registerLocaleData(localePt, 'pt');
+
 
 @NgModule({
   declarations: [
@@ -15,15 +24,22 @@ import { InitialsPipe } from './pipes/initials.pipe';
     ListaProdutosComponent,
     ListaUsuariosComponent,
     FiltroUsuarioPipe,
-    InitialsPipe
+    InitialsPipe,
+    DiscountPipe,
+    PrecoProdutosComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     FormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    {
+      provide: LOCALE_ID, useValue: 'pt'
+    }
   ],
   bootstrap: [AppComponent]
 })
